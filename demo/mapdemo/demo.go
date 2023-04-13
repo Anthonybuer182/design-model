@@ -10,6 +10,6 @@ type Dog struct {
 func GetDatas() CustomMap {
 
 	return CustomMap{
-		data: map[string]Dog{Name: ""}
+		data: map[string]Dog{"A": {Name: "张三"}},
 	}
 }

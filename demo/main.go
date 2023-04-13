@@ -5,6 +5,7 @@ import (
 	"design-model/demo/build"
 	"design-model/demo/chain"
 	"design-model/demo/customerr"
+	"design-model/demo/decorator"
 	"design-model/demo/factory"
 	"design-model/demo/filter"
 	"design-model/demo/mapdemo"
@@ -90,6 +91,12 @@ func testMap() {
 	datas := mapdemo.GetDatas()
 	fmt.Println(datas)
 }
+func testDecorator() {
+	pizza := decorator.Chicago{Price: 20}
+	tomatoPizza := decorator.Tomato{Price: 10, Pizza: &pizza}
+	fmt.Println(tomatoPizza.GetPrice())
+
+}
 func main() {
-	testMap()
+	testDecorator()
 }
