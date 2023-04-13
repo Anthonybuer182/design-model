@@ -4,9 +4,12 @@ import (
 	"design-model/demo/adapter"
 	"design-model/demo/build"
 	"design-model/demo/chain"
+	"design-model/demo/customerr"
 	"design-model/demo/factory"
 	"design-model/demo/filter"
+	"design-model/demo/mapdemo"
 	"design-model/demo/observer"
+	"design-model/demo/recursion"
 	"design-model/demo/signle"
 	"design-model/demo/strtegy"
 	"fmt"
@@ -76,6 +79,17 @@ func testCount(num1 float64, num2 float64) {
 	fmt.Printf("%v+%v=%v\n", num1, num2, add)
 	fmt.Printf("%v-%v=%v", num1, num2, sub)
 }
+func testRecursion(num int) {
+	fmt.Println(recursion.Factorial(num))
+}
+func testCustomerr() {
+	err := customerr.OpenFile("")
+	fmt.Println(err)
+}
+func testMap() {
+	datas := mapdemo.GetDatas()
+	fmt.Println(datas)
+}
 func main() {
-	testCount(3, 2)
+	testMap()
 }
